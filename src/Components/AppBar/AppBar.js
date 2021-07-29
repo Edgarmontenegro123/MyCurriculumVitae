@@ -33,7 +33,7 @@ export default function BottomAppBar(){
   const classes = useStyles()
 
   return (
-    <React.Fragment>
+    <>
       <AppBar position='fixed' style = {{backgroundColor: '#52B5F2' /* 'rgb(49, 208, 129)' */}} className={classes.appBar}>
         <Toolbar className={classes.grow}>
           <IconButton href = 'https://twitter.com/MontenegroCode' target='_blank' rel='noreferrer' color='inherit' aria-label='open drawer'>
@@ -54,6 +54,6 @@ export default function BottomAppBar(){
           </IconButton>
         </Toolbar>
       </AppBar>
-    </React.Fragment>
+    </>
   )
 }
