@@ -29,8 +29,8 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-export default function BottomAppBar() {
-  const classes = useStyles();
+export default function BottomAppBar(){
+  const classes = useStyles()
 
   return (
     <React.Fragment>
@@ -40,7 +40,7 @@ export default function BottomAppBar() {
             <TwitterIcon />
           </IconButton >
           <Fab href = 'https://www.canva.com/design/DAElFbGgReo/w5KZpX2OLMFUX0hXbxV56w/view?utm_content=DAElFbGgReo&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink'
-           target='_blank' rel='noreferrer' color='secondary' aria-label='add' className={classes.fabButton} /* style ={{backgroundColor: 'rgb(244, 126, 35)'}} */>
+           target='_blank' rel='noreferrer' color='secondary' aria-label='add' className={classes.fabButton}>
             PDF
           </Fab>
           <IconButton href = 'mailto:edgarmontenegro321@gmail.com' target='_blank' rel='noreferrer'>
@@ -55,5 +55,5 @@ export default function BottomAppBar() {
         </Toolbar>
       </AppBar>
     </React.Fragment>
-  );
+  )
 }

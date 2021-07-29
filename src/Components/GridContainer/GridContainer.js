@@ -9,11 +9,11 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'left',
     backgroundColor: '#52B5F2' /* 'rgb(49, 208, 129)' */,
     height: '40vh',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('sm')]:{
       height:'25vh',
       width: 'auto'
     },
-    [theme.breakpoints.down('xl')]: {
+    [theme.breakpoints.down('xl')]:{
       height:'36vh',
       width: 'auto'
     }
@@ -23,18 +23,17 @@ const useStyles = makeStyles((theme) => ({
     width: '12rem',
     display: 'block',
     boxShadow: '2px 2px 2px 1px rgba(0, 0, 0, 0.2)',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('sm')]:{
       marginTop: '10%',
       width:'7rem',
       marginLeft: '1rem'
     },
-    [theme.breakpoints.down('xl')]: {
+    [theme.breakpoints.down('xl')]:{
       marginTop: '5%',
       width:'8rem',
       marginLeft: '3rem'
     }
-  },
-  
+  }
 }))
 
 export default function GridContainer(){

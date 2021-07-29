@@ -8,13 +8,13 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '5%',
         marginLeft: '31%', 
         position: 'absolute',
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('sm')]:{
             width:'16rem',
             marginLeft: '40%',
             top: 0,
             fontSize: '0.8rem'
           },
-        [theme.breakpoints.down('lg')]: {
+        [theme.breakpoints.down('lg')]:{
         width:'16rem',
         marginLeft: '40%',
         top: 0,
@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Title(){
     const classes = useStyles()
+    
     return(
         <>  
             <div className = {classes.divContainer}>

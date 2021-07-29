@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme) => ({
         color: 'darkgrey', 
         display: 'flex', 
         justifyContent: 'space-around', 
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('sm')]:{
             width:'100%',
             marginRight: '20%',
             marginTop: '15%'
@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
             width:'100%',
             marginTop: '5%'
           }, */
-          [theme.breakpoints.down('lg')]: {
+          [theme.breakpoints.down('lg')]:{
             width:'100%',
             marginTop: '2%'
           }
@@ -28,10 +28,9 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: '-4%'
     },
     extra:{
-        [theme.breakpoints.up('md')]: {
+        [theme.breakpoints.up('md')]:{
             display: 'flex'
-          }
-        
+          }       
     }
 }))
 
