@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/MyCurriculumVitae/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/MyCurriculumVitae/static/js/main.b4e95715.chunk.js",
+    "main.js.map": "/MyCurriculumVitae/static/js/main.b4e95715.chunk.js.map",
+    "runtime-main.js": "/MyCurriculumVitae/static/js/runtime-main.da77ff5a.js",
+    "runtime-main.js.map": "/MyCurriculumVitae/static/js/runtime-main.da77ff5a.js.map",
+    "static/js/2.1ab7c7a0.chunk.js": "/MyCurriculumVitae/static/js/2.1ab7c7a0.chunk.js",
+    "static/js/2.1ab7c7a0.chunk.js.map": "/MyCurriculumVitae/static/js/2.1ab7c7a0.chunk.js.map",
+    "index.html": "/MyCurriculumVitae/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/MyCurriculumVitae/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.1ab7c7a0.chunk.js.LICENSE.txt": "/MyCurriculumVitae/static/js/2.1ab7c7a0.chunk.js.LICENSE.txt",
+    "static/media/EdgarPerfil.7fc654a7.jpeg": "/MyCurriculumVitae/static/media/EdgarPerfil.7fc654a7.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.da77ff5a.js",
+    "static/js/2.1ab7c7a0.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.b4e95715.chunk.js"
+  ]
+}
