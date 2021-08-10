@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
       width: 'auto'
     },
     [theme.breakpoints.up('md')]:{
-      height:'36vh',
+      height:'33vh',
       width: 'auto'
     }
   }, 
