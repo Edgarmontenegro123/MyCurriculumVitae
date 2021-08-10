@@ -13,7 +13,7 @@ import GitHubIcon from '@material-ui/icons/GitHub'
 const useStyles = makeStyles((theme) => ({
   appBar: {
     top: 'auto',
-    bottom: 0,
+    bottom: 0
   },
   grow: {
     display: 'flex',

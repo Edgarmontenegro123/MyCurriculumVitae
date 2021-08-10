@@ -36,12 +36,7 @@ const useStyles = makeStyles((theme) => ({
     divLogo:{
         display: 'flex', 
         flexDirection: 'column'
-    },
-    /* extra:{
-        [theme.breakpoints.up('md')]:{
-            display: 'flex'
-          }       
-    } */
+    }
 }))
 
 export default function Icons(){
@@ -71,6 +66,13 @@ export default function Icons(){
                     <i className="fab fa-git-square"></i>Git
                 </div>
             </div>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
         </div>
     )
 }

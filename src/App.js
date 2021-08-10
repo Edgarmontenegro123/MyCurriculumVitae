@@ -8,10 +8,12 @@ import AppBar from './Components/AppBar/AppBar'
 function App(){
   return(
     <>
+    <div className = 'divContainer'>
       <GridContainer />
       <Title />
       <Content />
       <Icons />
+    </div>
       <AppBar />
     </>
   )
