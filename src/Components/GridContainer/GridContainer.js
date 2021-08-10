@@ -1,7 +1,7 @@
 import React from 'react'
 import {makeStyles} from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
-import Photo from '../../Images/EdgarPhoto.jpeg'
+import Photo from '../../Images/Edgar.jpeg'
 
 const useStyles = makeStyles((theme) => ({
   backUp:{
