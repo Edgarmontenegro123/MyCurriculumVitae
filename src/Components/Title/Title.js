@@ -8,19 +8,26 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '5%',
         marginLeft: '31%', 
         position: 'absolute',
-        [theme.breakpoints.down('sm')]:{
-            width:'16rem',
+        [theme.breakpoints.down('xs')]:{
+            width:'10rem',
+            marginTop: '5%',
             marginLeft: '40%',
+            top: 0,
+            fontSize: '0.5rem'
+          },
+        [theme.breakpoints.up('sm')]:{
+            width:'20rem',
+            marginTop: '5%',
+            marginLeft: '35%',
             top: 0,
             fontSize: '0.8rem'
           },
-        [theme.breakpoints.down('lg')]:{
-        width:'16rem',
+       /*  [theme.breakpoints.up('lg')]:{
+        width:'25rem',
         marginLeft: '40%',
-        fontSize: '0.8rem',
-        /* top: 0, */
+        fontSize: '2rem',
         top: -10
-        }
+        } */
     }
 }))
 
@@ -30,9 +37,9 @@ export default function Title(){
     return(
         <>  
             <div className = {classes.divContainer}>
-                <h1>Hola mi nombre es Edgar!</h1>
+                <h1>Hola, mi nombre es Edgar!</h1>
                 <Divider />
-                <h3>FullStack Web Developer</h3>
+                <h2>FullStack Web Developer</h2>
                 <Divider />
             </div>          
         </>

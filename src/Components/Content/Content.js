@@ -4,20 +4,20 @@ import {makeStyles} from '@material-ui/core/styles'
 const useStyles = makeStyles((theme) => ({
     spanStyle:{
         color: 'darkgrey',
-        [theme.breakpoints.down('sm')]:{
-            marginTop: '15%',
-            fontSize: '0.9rem',
+        [theme.breakpoints.down('xs')]:{
+            marginTop: '10%',
+            fontSize: '1rem',
+            marginLeft: '3%',
+            justifyContent: 'center',
+          },
+        [theme.breakpoints.up('sm')]:{
+            marginTop: '3%',
+            fontSize: '1.2rem',
             marginLeft: '3%'
           },
-        /* [theme.breakpoints.down('sm')]: {
-        marginTop: '5%',
-        fontSize: '0.9rem',
-        marginLeft: '3%'
-        } */
-        
-        [theme.breakpoints.down('xl')]:{
-        marginTop: '5%',
-        fontSize: '0.9rem',
+        [theme.breakpoints.up('md')]:{
+        marginTop: '2%',
+        fontSize: '1.3rem',
         marginLeft: '3%'
         }
     }
