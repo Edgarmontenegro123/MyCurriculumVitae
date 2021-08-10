@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
             textAlign: 'center'     
           },
         [theme.breakpoints.up('sm')]:{
-            marginTop: '5%',
+            marginTop: '3%',
            justifyContent: 'space-evenly',
            textAlign: 'center',        
            fontSize: '1.5rem'
@@ -36,10 +36,7 @@ const useStyles = makeStyles((theme) => ({
     divLogo:{
         display: 'flex', 
         flexDirection: 'column'
-    }, 
-    /* balance:{
-        marginLeft: '-4%'
-    }, */
+    },
     /* extra:{
         [theme.breakpoints.up('md')]:{
             display: 'flex'

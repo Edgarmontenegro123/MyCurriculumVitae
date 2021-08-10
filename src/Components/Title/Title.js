@@ -22,12 +22,12 @@ const useStyles = makeStyles((theme) => ({
             top: 0,
             fontSize: '0.8rem'
           },
-       /*  [theme.breakpoints.up('lg')]:{
+        [theme.breakpoints.up('lg')]:{
         width:'25rem',
-        marginLeft: '40%',
-        fontSize: '2rem',
-        top: -10
-        } */
+        marginLeft: '20%',
+        fontSize: '1rem',
+        top: -40
+        }
     }
 }))
 
