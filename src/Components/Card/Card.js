@@ -1,10 +1,9 @@
 import React from 'react'
-import {makeStyles} from '@material-ui/core/styles'
+// import {makeStyles} from '@material-ui/core/styles'
 import clsx from 'clsx'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
-import {Grid, Card, CardHeader, CardMedia, CardContent, CardActions, Collapse, Avatar, IconButton, Typography} from '@material-ui/core'
+import {Grid, Card, CardHeader, CardMedia, CardContent, CardActions, Collapse, Avatar, IconButton, Typography, makeStyles} from '@material-ui/core'
 import Logo from '../../Images/sunnyCloud.png'
-import ClimApp from '../../Images/presentationClimApp.jpeg'
 import GifClimApp from '../../Images/gifClimApp.gif'
 import './Card.css'
 
@@ -137,101 +136,6 @@ export default function RecipeReviewCard(){
         <br />
         <br />
       </Grid>
-
-
-
-
-{/* 
-      <Grid item xs = {12} sm = {6} lg = {4}>
-        <Card className={classes.root}>
-          <CardHeader
-            avatar={
-              <Avatar aria-label="recipe" className={classes.avatar}>
-                <img src = {Logo} 
-                     alt = 'C'
-                     width = '30px'
-                     height = '30px'/>      
-              </Avatar>
-            }
-            title="Healthier"
-            subheader="Julio 2021"
-          />
-          <CardMedia
-          className={classes.media}
-          image= {ClimApp}
-          alt = 'ClimApp'
-          title="ClimApp"
-          >
-          </CardMedia>     
-          <CardContent>
-            <Typography variant="body2" color="textSecondary" component="p">
-            <strong>Proyecto grupal Healthier.</strong>
-            </Typography>
-          </CardContent>
-          <CardActions disableSpacing>
-            <IconButton aria-label="share" style = {{marginTop : '-5%'}}>
-              <a href = 'https://vimeo.com/manage/videos/586633960' target = '_blank' rel="noreferrer"><i id = 'icon' className="fas fa-play"></i></a>
-            </IconButton>
-            <IconButton
-              className={clsx(classes.expand, {
-                [classes.expandOpen]: expanded,
-              })}
-              onClick={handleExpandClick}
-              aria-expanded={expanded}
-              aria-label="show more"
-            > 
-              <ExpandMoreIcon />
-            </IconButton>
-          </CardActions>
-          <Collapse in={expanded} timeout="auto" unmountOnExit>
-            <CardContent>
-              <Typography paragraph>Healthier:</Typography>
-              <Typography paragraph>
-                Esta es una App creada como proyecto final para el bootcamp de Henry, que muestra un market-place enfocado a la compra y venta de comida saludable, donde 
-                podrás elegir cientos de productos, agregarlos a una lista de favoritos, agregarlos a un carrito de compras y llevar a cabo el pago mediante la pasarela 
-                de pago MercadoPago. 
-              </Typography>
-              <Typography paragraph>
-                Para realizarla se utilizaron tecnologías como:
-                <ul>
-                <li>
-                    React
-                  </li>
-                  <li>
-                    Redux
-                  </li>
-                  <li>
-                    Material UI
-                  </li>
-                  <li>
-                    CSS3
-                  </li>
-                  <li>
-                    Node JS
-                  </li>
-                  <li>
-                    Express
-                  </li>
-                  <li>
-                    PostgreSQL
-                  </li>
-                  <li>
-                    Sequelize
-                  </li>
-                </ul>
-              </Typography>
-              <Typography paragraph>
-                <strong>Pruébala <a className = 'link' href = 'https://climappmontenegro.vercel.app' target = '_blank' rel="noreferrer">Acá!</a></strong>
-              </Typography>
-              <Typography>
-              <strong>Observa el <a className = 'link' href = 'https://github.com/Healthier-Group/Healthier' target = '_blank' rel="noreferrer">Código</a> Acá!</strong>
-              </Typography>
-            </CardContent>
-          </Collapse>
-        </Card>
-        <br />
-        <br />
-      </Grid> */}
     </Grid>
   )
 }
