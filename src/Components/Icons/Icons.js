@@ -11,8 +11,7 @@ const useStyles = makeStyles((theme) => ({
         widht: '100%',
         marginTop: '10%',
          [theme.breakpoints.down('xs')]:{
-            marginTop: '10%',
-            marginBottom: '5%',
+            marginTop: '20%',
             justifyContent: 'space-evenly',
             textAlign: 'center'     
           },

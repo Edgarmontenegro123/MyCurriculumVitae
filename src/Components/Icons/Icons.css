@@ -1,8 +1,7 @@
 .fab{
     text-align: center;
-    justify-content: 'space-evenly';
+    justify-content: 'space-evenly'
 }
-
 @media(max-width: 959px){
     .fab{
         font-size: 2rem
@@ -15,6 +14,6 @@
 }
 @media(min-width: 1280px){
     .fab{
-        font-size: 2rem;
+        font-size: 2rem
     }
 }

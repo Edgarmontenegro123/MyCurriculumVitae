@@ -1,5 +1,4 @@
-import React from 'react'
-// import {makeStyles} from '@material-ui/core/styles'
+import {useState} from 'react'
 import clsx from 'clsx'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import {Grid, Card, CardHeader, CardMedia, CardContent, CardActions, Collapse, Avatar, IconButton, Typography, makeStyles} from '@material-ui/core'
@@ -35,13 +34,14 @@ const useStyles = makeStyles((theme) => ({
   }, 
   gridContainer:{
     paddingLeft: '40px',
-    paddingRight: '40px'
+    paddingRight: '40px',
+    marginBottom: '20%'
   }
 }))
 
 export default function RecipeReviewCard(){
   const classes = useStyles()
-  const [expanded, setExpanded] = React.useState(false)
+  const [expanded, setExpanded] = useState(false)
 
   const handleExpandClick = () => {
     setExpanded(!expanded)
@@ -78,8 +78,6 @@ export default function RecipeReviewCard(){
               <source src = {{GifClimApp}}></source>
             </media>
           </CardMedia>
-            
-          
           <CardContent>
             <Typography variant="body2" color="textSecondary" component="p">
             <strong>Primera App FrontEnd realizada con React y una API externa.</strong>
@@ -133,12 +131,6 @@ export default function RecipeReviewCard(){
             </CardContent>
           </Collapse>
         </Card>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
       </Grid>
     </Grid>
   )
