@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-export default function RecipeReviewCard(){
+export default function RecipeReviewCard({items}){
   const classes = useStyles()
   const [expanded, setExpanded] = useState(false)
 
@@ -47,91 +47,161 @@ export default function RecipeReviewCard(){
     setExpanded(!expanded)
   }
 
-  return(
+  {/*return(
+     <div>
+      {items.map(i => 
     <Grid container spacing = {4} className = {classes.gridContainer} justify = 'center'>
       <Grid item xs = {12} sm = {6} lg = {4}>
-        <Card className={classes.root}>
+        <Card className = {classes.root}>
           <CardHeader
-            avatar={
-              <Avatar aria-label="recipe" className={classes.avatar}>
-                <img src = {Logo} 
+            avatar = {
+              <Avatar aria-label = 'recipe' className = {classes.avatar}>
+                <img src = {i.avatar} 
                      alt = 'C'
                      width = '30px'
                      height = '30px'/>      
               </Avatar>
             }
-           /*  action={
-              <IconButton aria-label="settings">
-                <MoreVertIcon />
-              </IconButton>
-            } */
-            title="ClimApp"
-            subheader="Marzo 2021"
+            title = {i.avatarTitle}
+            subheader = {i.avatarSubheader}
           />
           <CardMedia
-          className={classes.media}
-          image= {GifClimApp}
-          alt = 'ClimApp'
-          title="ClimApp"
+          className = {classes.media}
+          image = {i.cardMediaImage}
+          alt = {i.avatarTitle}
+          title = {i.avatarTitle}
           >
             <media>
-              <source src = {{GifClimApp}}></source>
+              <source src = {i.cardMediaImage}></source>
             </media>
           </CardMedia>
           <CardContent>
-            <Typography variant="body2" color="textSecondary" component="p">
-            <strong>Primera App FrontEnd realizada con React y una API externa.</strong>
+            <Typography variant = 'body2' color = 'textSecondary' component = 'p'>
+            <strong>{i.cardContentTypography}</strong>
             </Typography>
           </CardContent>
           <CardActions disableSpacing>
-            {/* <IconButton aria-label="add to favorites">
-              <FavoriteIcon />
-            </IconButton> */}
-            <IconButton aria-label="share" style = {{marginTop : '-5%'}}>
-              {/* <ShareIcon /> */}
-              <a href = 'https://vimeo.com/manage/videos/586698718' target = '_blank' rel="noreferrer"><i id = 'icon' className="fas fa-play"></i></a>
+            <IconButton aria-label = 'share' style = {{marginTop : '-5%'}}>
+              <a href = {i.iconButton} target = '_blank' rel = 'noreferrer'><i id = 'icon' className = 'fas fa-play'></i></a>
             </IconButton>
             <IconButton
-              className={clsx(classes.expand, {
+              className = {clsx(classes.expand, {
                 [classes.expandOpen]: expanded,
               })}
-              onClick={handleExpandClick}
-              /* aria-expanded={expanded}
-              aria-label="show more" */
+              onClick = {handleExpandClick}
             > 
               <ExpandMoreIcon />
             </IconButton>
           </CardActions>
-          <Collapse in={expanded} timeout="auto" unmountOnExit>
+          <Collapse in = {expanded} timeout = 'auto' unmountOnExit>
             <CardContent>
-              <Typography paragraph>ClimApp:</Typography>
+              <Typography paragraph>{i.typography}</Typography>
               <Typography paragraph>
-                Esta es una App con una interfaz amigable, que muestra la hora y la fecha detallada del lugar donde te encuentres, con un buscador intuitivo, para que 
-                elijas tus ciudades favoritas y en ellas puedas observar los datos climáticos más relevantes. 
+                {i.typographyParagraph}
               </Typography>
               <Typography paragraph>
-                Para realizarla se utilizaron tecnologías como:
+                {i.typographyParagraph2}
                 <ul>
                   <li>
-                    React
+                    {i.li1}
                   </li>
                   <li>
-                    CSS3
+                    {i.li2}
                   </li><li>
-                    Material UI
+                    {i.li3}
                   </li>
                 </ul>
               </Typography>
               <Typography paragraph>
-                <strong>Pruébala <a className = 'link' href = 'https://climappmontenegro.vercel.app' target = '_blank' rel="noreferrer">Acá!</a></strong>
+                <strong>{i.strong1}<a className = 'link' href = {i.link1} target = '_blank' rel = 'noreferrer'>Acá!</a></strong>
               </Typography>
               <Typography>
-              <strong>Observa el <a className = 'link' href = 'https://github.com/Edgarmontenegro123/ClimApp' target = '_blank' rel="noreferrer">Código</a> Acá!</strong>
+              <strong>Observa el <a className = 'link' href = {i.link2} target = '_blank' rel = 'noreferrer'>Código</a> Acá!</strong>
               </Typography>
             </CardContent>
           </Collapse>
         </Card>
       </Grid>
     </Grid>
+    )}
+    </div>
   )
+} */}
+
+return(
+  <Grid container spacing = {4} className = {classes.gridContainer} justify = 'center'>
+    <Grid item xs = {12} sm = {6} lg = {4}>
+      <Card className = {classes.root}>
+        <CardHeader
+          avatar = {
+            <Avatar aria-label = 'recipe' className = {classes.avatar}>
+              <img src = {Logo} 
+                   alt = 'C'
+                   width = '30px'
+                   height = '30px'/>      
+            </Avatar>
+          }
+          title = 'ClimApp'
+          subheader = 'Marzo 2021'
+        />
+        <CardMedia
+        className = {classes.media}
+        image = {GifClimApp}
+        alt = 'ClimApp'
+        title='ClimApp'
+        >
+          <media>
+            <source src = {{GifClimApp}}></source>
+          </media>
+        </CardMedia>
+        <CardContent>
+          <Typography variant = 'body2' color = 'textSecondary' component = 'p'>
+          <strong>Primera App FrontEnd realizada con React y una API externa.</strong>
+          </Typography>
+        </CardContent>
+        <CardActions disableSpacing>
+          <IconButton aria-label = 'share' style = {{marginTop : '-5%'}}>
+            <a href = 'https://vimeo.com/manage/videos/586698718' target = '_blank' rel = 'noreferrer'><i id = 'icon' className = 'fas fa-play'></i></a>
+          </IconButton>
+          <IconButton
+            className = {clsx(classes.expand, {
+              [classes.expandOpen]: expanded,
+            })}
+            onClick = {handleExpandClick}
+          > 
+            <ExpandMoreIcon />
+          </IconButton>
+        </CardActions>
+        <Collapse in = {expanded} timeout = 'auto' unmountOnExit>
+          <CardContent>
+            <Typography paragraph>ClimApp:</Typography>
+            <Typography paragraph>
+              Esta es una App con una interfaz amigable, que muestra la hora y la fecha detallada del lugar donde te encuentres, con un buscador intuitivo, para que 
+              elijas tus ciudades favoritas y en ellas puedas observar los datos climáticos más relevantes. 
+            </Typography>
+            <Typography paragraph>
+              Para realizarla se utilizaron tecnologías como:
+              <ul>
+                <li>
+                  React
+                </li>
+                <li>
+                  CSS3
+                </li><li>
+                  Material UI
+                </li>
+              </ul>
+            </Typography>
+            <Typography paragraph>
+              <strong>Pruébala <a className = 'link' href = 'https://climappmontenegro.vercel.app' target = '_blank' rel = 'noreferrer'>Acá!</a></strong>
+            </Typography>
+            <Typography>
+            <strong>Observa el <a className = 'link' href = 'https://github.com/Edgarmontenegro123/ClimApp' target = '_blank' rel = 'noreferrer'>Código</a> Acá!</strong>
+            </Typography>
+          </CardContent>
+        </Collapse>
+      </Card>
+    </Grid>
+  </Grid>
+)
 }

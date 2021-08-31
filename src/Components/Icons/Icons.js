@@ -59,7 +59,7 @@ export default function Icons(){
                     <i className="fab fa-react"></i>React
                 </div>
                 <div className = {classes.divLogo}>
-                    <i className="fab fa-node"></i>Node
+                    <i id = 'node' className="fab fa-node"></i>Node
                 </div>
                 <div className = {classes.divLogo}>
                     <i className="fab fa-git-square"></i>Git

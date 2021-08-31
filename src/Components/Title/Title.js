@@ -33,13 +33,15 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Title(){
     const classes = useStyles()
+    let p = '<'
+    let q = '/>'
     
     return(
         <>  
             <div className = {classes.divContainer}>
                 <h1>Hola, mi nombre es <strong>Edgar</strong>!</h1>
                 <Divider />
-                <h2>FullStack Web Developer</h2>
+                <h2><stronge>{p}</stronge>FullStack Web Developer <stronge>{q}</stronge></h2>
                 <Divider />
             </div>          
         </>
