@@ -1,7 +1,7 @@
 import React from 'react'
 import Content from '../Content/Content'
 import Icons from '../Icons/Icons'
-import Card from '../Card/Card'
+import ListItemContainer from '../ListItemContainer/ListItemContainer'
 import './Background.css'
 
 export default function Background(){
@@ -9,7 +9,7 @@ export default function Background(){
         <div class="hero">
           <Content /> 
           <Icons />
-          <Card />
+          <ListItemContainer />
           <div class="hero__title"></div>
           <div class="cube"></div>
           <div class="cube"></div>
