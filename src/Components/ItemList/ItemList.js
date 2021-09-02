@@ -1,11 +1,8 @@
 import React, {useState} from 'react'
-import {Grid, Card, CardHeader, CardMedia, CardContent, CardActions, Collapse, Avatar, IconButton, Typography, makeStyles} from '@material-ui/core'
-import clsx from 'clsx'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
-
-import Accordion from '@material-ui/core/Accordion';
-import AccordionDetails from '@material-ui/core/AccordionDetails';
-import AccordionSummary from '@material-ui/core/AccordionSummary';
+import {Grid, Card, CardHeader, CardMedia, CardContent, CardActions,
+        Accordion, AccordionDetails, AccordionSummary, Avatar, IconButton, 
+        Typography, makeStyles} from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
     root:{
@@ -25,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
       marginTop: '-5%',
       transform: 'rotate(0deg)',
       marginLeft: 'auto',
-      transition: theme.transitions.create('transform', {
+      transition: theme.transitions.create('transform',{
         duration: theme.transitions.duration.shortest
       })
     },
@@ -46,7 +43,6 @@ const useStyles = makeStyles((theme) => ({
     }
   }))
     
-
 export default function ItemList({items}){
   const classes = useStyles()
     const [expanded, setExpanded] = useState(false)
@@ -56,12 +52,12 @@ export default function ItemList({items}){
     }
 
     const handleChange = (panel) => (event, isExpanded) => {
-        setExpanded(isExpanded ? panel : false);
-      };
+        setExpanded(isExpanded ? panel : false)
+      }
 
   return(
     <div /* style = {{display: 'flex'}} */>
-      {items.map(i => 
+      {items?.map(i => 
       <Grid container spacing = {4} className = {classes.gridContainer} justify = 'center'>
         <Grid item xs = {12} sm = {6} lg = {4}>
           <Card className = {classes.root}>
@@ -113,10 +109,10 @@ export default function ItemList({items}){
                       <li>{i.li5}</li>
                     </ul>
                     <Typography paragraph>
-                      <strong>Pruébala <a className = {classes.link} id = 'link' href = {i.link1} target = '_blank' rel = 'noreferrer'>Acá!</a></strong>
+                      <strong>Pruébala <a className = {classes.link} href = {i.link1} target = '_blank' rel = 'noreferrer'>Acá!</a></strong>
                     </Typography>
                     <Typography>
-                      <strong>Observa el <a className = {classes.link} id = 'link' href = {i.link2} target = '_blank' rel = 'noreferrer'>Código</a> Acá!</strong>
+                      <strong>Observa el <a className = {classes.link} href = {i.link2} target = '_blank' rel = 'noreferrer'>Código</a> Acá!</strong>
                     </Typography>
                   </Typography>
                 </AccordionDetails>
