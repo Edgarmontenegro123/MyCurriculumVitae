@@ -39,9 +39,9 @@ export default function Title(){
     return(
         <>  
             <div className = {classes.divContainer}>
-                <h1>Hola, mi nombre es <strong>Edgar</strong>!</h1>
+                <h1>Hola, mi nombre es <b>Edgar</b>!</h1>
                 <Divider />
-                <h2><stronge>{p}</stronge>FullStack Web Developer <stronge>{q}</stronge></h2>
+                <h2><b>{p}</b>FullStack Web Developer <b>{q}</b></h2>
                 <Divider />
             </div>          
         </>

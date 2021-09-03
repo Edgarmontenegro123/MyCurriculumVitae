@@ -1,17 +1,13 @@
-import React, {useState} from 'react'
-import {Grid, Card, CardHeader, CardMedia, CardContent, CardActions, Collapse, Avatar, IconButton, Typography, makeStyles} from '@material-ui/core'
-import clsx from 'clsx'
+import React from 'react'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
-
-import Accordion from '@material-ui/core/Accordion';
-import AccordionDetails from '@material-ui/core/AccordionDetails';
-import AccordionSummary from '@material-ui/core/AccordionSummary';
+import {Grid, Card, CardHeader, CardMedia, CardContent, CardActions,
+        Accordion, AccordionDetails, AccordionSummary, Avatar, IconButton, 
+        Typography, List, ListItemText, makeStyles} from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
     root:{
       maxWidth: 345,
-      marginTop: '-10%',
-      marginBottom:'-40%',
+      marginTop: '-25%',
       boxShadow: '0px 0px 0.5px 0.5px #52B5F2'
     },
     media:{
@@ -25,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
       marginTop: '-5%',
       transform: 'rotate(0deg)',
       marginLeft: 'auto',
-      transition: theme.transitions.create('transform', {
+      transition: theme.transitions.create('transform',{
         duration: theme.transitions.duration.shortest
       })
     },
@@ -46,23 +42,13 @@ const useStyles = makeStyles((theme) => ({
     }
   }))
     
-
 export default function ItemList({items}){
   const classes = useStyles()
-    const [expanded, setExpanded] = useState(false)
-  
-    const handleExpandClick = () => {
-      setExpanded(!expanded)
-    }
-
-    const handleChange = (panel) => (event, isExpanded) => {
-        setExpanded(isExpanded ? panel : false);
-      };
 
   return(
     <div /* style = {{display: 'flex'}} */>
-      {items.map(i => 
-      <Grid container spacing = {4} className = {classes.gridContainer} justify = 'center'>
+      {items?.map(i => 
+      <Grid key = {i.id} container spacing = {4} className = {classes.gridContainer} justifyContent = 'center'>
         <Grid item xs = {12} sm = {6} lg = {4}>
           <Card className = {classes.root}>
             <CardHeader
@@ -75,48 +61,44 @@ export default function ItemList({items}){
                 </Avatar>
               }
               title = {i.title}
-              subheader = {i.avatarSubheader}
+              subheader = {i.date}
             />
             <CardMedia
             className = {classes.media}
-            image = {i.cardMediaImage}
+            image = {i.img}
             alt = {i.name}
             title = {i.name}
-            >
-            </CardMedia>
+            />
             <CardContent>
-              <Typography variant = 'body2' color = 'textSecondary' component = 'p'>
-              <strong>{i.cardContentTypography}</strong>
+              <Typography component={'div'} variant = 'body2' color = 'textSecondary' style = {{fontWeight:'bold'}}>
+                {i.resume}
               </Typography>
             </CardContent>
             <CardActions disableSpacing className = {classes.accordion}>
               <Accordion>
                 <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel1a-content"
-                  id="panel1a-header"
+                  expandIcon = {<ExpandMoreIcon />}
+                  aria-controls = 'panel1a-content'
+                  id = 'panel1a-header'
                 >
                   <IconButton aria-label = 'share' style = {{marginTop : '-5%'}}>
-                    <a className = {classes.link} href = {i.iconButton} target = '_blank' rel = 'noreferrer'><i id = 'icon' className = 'fas fa-play'></i></a>
+                    <a className = {classes.link} href = {i.video} target = '_blank' rel = 'noreferrer'>
+                      <i id = 'icon' className = 'fas fa-play'></i>
+                    </a>
                   </IconButton>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <Typography>
-                    {i.typographyParagraph}
+                  <Typography component={'div'}>
+                    {i.description}
                     <br/>
-                    {i.typographyParagraph2}
-                    <ul>
-                      <li>{i.li1}</li>
-                      <li>{i.li2}</li>
-                      <li>{i.li3}</li>
-                      <li>{i.li4}</li>
-                      <li>{i.li5}</li>
-                    </ul>
-                    <Typography paragraph>
-                      <strong>Pruébala <a className = {classes.link} id = 'link' href = {i.link1} target = '_blank' rel = 'noreferrer'>Acá!</a></strong>
-                    </Typography>
-                    <Typography>
-                      <strong>Observa el <a className = {classes.link} id = 'link' href = {i.link2} target = '_blank' rel = 'noreferrer'>Código</a> Acá!</strong>
+                    Para realizarla se utilizaron tecnologías como: 
+                    <List component="nav" aria-label="secondary mailbox folders">
+                      <ListItemText primary = {<b>{i.tech}</b>} />
+                    </List>       
+                    <Typography component={'div'} style = {{fontWeight:'bold'}}>
+                      Pruébala <a className = {classes.link} href = {i.deploy} target = '_blank' rel = 'noreferrer'>Acá!</a>
+                      <br/>
+                      Observa el <a className = {classes.link} href = {i.gitHub} target = '_blank' rel = 'noreferrer'>Código</a> Acá!
                     </Typography>
                   </Typography>
                 </AccordionDetails>

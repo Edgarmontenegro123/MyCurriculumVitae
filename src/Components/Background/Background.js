@@ -6,17 +6,17 @@ import './Background.css'
 
 export default function Background(){
     return(
-        <div class="hero">
+        <div className ='hero'>
           <Content /> 
           <Icons />
           <ListItemContainer />
-          <div class="hero__title"></div>
-          <div class="cube"></div>
-          <div class="cube"></div>
-          <div class="cube"></div>
-          <div class="cube"></div>
-          <div class="cube"></div>
-          <div class="cube"></div>
+          <div className ='hero__title'></div>
+          <div className ='cube'></div>
+          <div className ='cube'></div>
+          <div className ='cube'></div>
+          <div className ='cube'></div>
+          <div className ='cube'></div>
+          <div className ='cube'></div>
         </div>
     )
 }
