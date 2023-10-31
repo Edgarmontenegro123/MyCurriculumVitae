@@ -41,7 +41,7 @@ export default function Title(){
             <div className = {classes.divContainer}>
                 <h1>Hola, mi nombre es <b>Edgar</b>!</h1>
                 <Divider />
-                <h2><b>${p}</b>Web Developer <b>${q}</b></h2>
+                <h2><b>{p}</b>Web Developer <b>{q}</b></h2>
                 <Divider />
             </div>          
         </>

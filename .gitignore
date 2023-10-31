@@ -36,3 +36,4 @@ Thumbs.db
 *.iml
 *.iws
 *.log
+node_modules
