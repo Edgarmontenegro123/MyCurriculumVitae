@@ -1,0 +1,38 @@
+# Node.js
+node_modules/
+
+# Dependencias generadas por npm
+npm-debug.log
+yarn-error.log
+
+# Archivos de construcción
+/build/
+/dist/
+
+# Ambiente de desarrollo
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Sistema de gestión de paquetes
+package-lock.json
+yarn.lock
+
+# Archivos generados automáticamente
+.DS_Store
+Thumbs.db
+
+# Dependencias específicas de tu entorno (por ejemplo, WebStorm)
+.idea/
+
+# Cache o archivos temporales generados por el IDE (por ejemplo, WebStorm)
+*.iml
+*.iws
+*.log
